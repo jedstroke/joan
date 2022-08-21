@@ -2,22 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./assets/img/heart.png" />
+    <link rel="icon" href="https://res.cloudinary.com/jedstroke/image/upload/v1661012008/heart_3_ihwvqu.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0c0712" />
+    <meta name="theme-color" content="#232526" />
     <meta
       name="description"
       content="A montage to whom I love dearly."
     />
-    <link rel="preload" crossorigin as="font" href="./assets/font/Mellow.otf">
-    <link rel="preload" as="image" href="./assets/img/love.jpg">
-    <link rel="preload" as="image" href="./assets/img/heart.png">
-    <link rel="apple-touch-icon" href="./assets/img/heart.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta property="og:title" content="For Joan">
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="A montage to whom I love dearly.">
+    <meta property="og:image" content="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg">
+    <meta property="og:url" content="https://joan.onrender.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="preload" crossorigin as="font" href="https://res.cloudinary.com/jedstroke/raw/upload/v1660959468/Mellow_cs0wrz.otf">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/jedstroke/image/upload/v1661012008/heart_3_ihwvqu.png" />
     <title>For Joan</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('worker.js').then(function(registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function(err) {
+          console.log('Worker registration failed', err);
+        }).catch(function(err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+  </script>
 </html>
