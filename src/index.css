@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: 'Mellow';
-  src: url(https://res.cloudinary.com/jedstroke/raw/upload/v1660959468/Mellow_cs0wrz.otf);
+  src: url(https://res.cloudinary.com/jedstroke/raw/upload/v1661197940/HandoSoftTrial-Regular_lvjyzo.ttf);
 }
 html, body, #root {
   padding: 0;
@@ -20,7 +20,7 @@ html, body, #root {
   overflow-y: hidden;
   overflow-x: hidden;
   font-display: swap;
-  font-family: 'Mellow', 'Trebuchet MS', sans-serif;
+  font-family: 'Mellow', Verdana, sans-serif;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
