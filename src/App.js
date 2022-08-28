@@ -4,31 +4,45 @@ import './App.css';
 function App() {
   const [title] = useState('sticky');
   const [soundInit, setSoundInit] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const heart = useRef(null);
+  const tapper = useRef(null);
   const memories = useRef(null);
   const poem = useRef(null);
   const preloader = useRef(null);
-  const initPlayMemories = useCallback(() => {
-    if(soundInit === false){
-      memories.current.play();
-      setSoundInit(true);
-      memories.current.stop();
-    }
-  }, [soundInit]);
+  const sounder = useCallback(() => {
+    memories.current.play()
+    memories.current.pause()
+    setSoundInit(true);
+    toast.dismiss('toast one');
+    toast('Thank you 👏🏽', {
+      id:'toast',
+      duration: 1000,
+    });
+  }, [])
   useEffect(() => {
-    poem.current.addEventListener('touchend', initPlayMemories)
     const toast1 = () => {
-      toast('Wait for it 😉', {
+      toast('Click the screen to unlock sounds 😉', {
         id:'toast one',
-        duration: 6000,
-      },);
+        duration: 50000,
+      });
+      tapper.current.addEventListener('click', () => {
+        if(!soundInit){
+          sounder();
+        }
+      })
     };
     const stanzas = document.querySelectorAll('.stanza');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(`${entry.target}: ${entry.intersectionRatio} `);
-        console.log(entry.target);
         if(entry.isIntersecting){
+          if(entry.target.dataset.mood === 'Hollow Coves'){
+            if (!playing) {
+              memories.current.volume = 0.5;
+              memories.current.play();
+              setPlaying(true);
+            }
+          }
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
         }else{
@@ -43,11 +57,13 @@ function App() {
       observer.observe(el);
     })
     toast1();
-  }, [initPlayMemories])
+  }, [soundInit, sounder])
   return (
     <>
-    <div className="App">
-      <audio ref={memories} src="https://res.cloudinary.com/jedstroke/video/upload/v1660959435/Hollow_Coves_-_These_Memories_tlcjqg.mp3"></audio>
+    <div ref={tapper} className="App">
+      <audio onEnded={()=> {
+        setPlaying(!playing);
+      }} ref={memories} src="https://res.cloudinary.com/jedstroke/video/upload/v1660959435/Hollow_Coves_-_These_Memories_tlcjqg.mp3"></audio>
       <div ref={preloader} className='preloader'>
         <div className='preloaderContent'>
           <div>
@@ -67,31 +83,38 @@ function App() {
         <div className='pushBox'>
         </div>
         <div className='gradient'></div>
-        <div className='stanza'>
+        <div data-mood="" className='stanza'>
         <p className='line'>I came to you bare and naked</p>
         <p className='line'>You clothe me with love so sacred</p>
         <p className='line'>I bet we’re on God’s favorite TV series</p>
         </div>
-        <div className='stanza'>
+        <div data-mood="" className='stanza'>
         <p className='line'>I didn’t know I had arrhythmia</p>
         <p className='line'>Until I met you. You’re my redeemer</p>
         <p className='line'>I’m laid-back, and I chase no Maybach</p>
         </div>
-        <div className='stanza'>
-        <p data-mode="Hollow Coves" className='line'>But aurora-dreams for Joan</p>
+        <div data-mood="Hollow Coves" className='stanza'>
+        <p className='line'>But aurora-dreams for Joan</p>
         <p className='line'>In mid-night sun I’ll ask to be your man</p>
         <p className='line'>Life has been hell but you’ve been my novocaine</p>
         </div>
-        <div className='stanza'>
+        <div data-mood="" className='stanza'>
         <p className='line'>When I fall apart you keep me sane</p>
         <p className='line'>Space or time can’t take you from my astral plane</p>
         <p className='line'>And when we have a kid I think I will name him Gekyume</p>
         </div>
-        <div className='stanza'>
+        <div data-mood='' className='stanza'>
         <p className='line'>Because you were, and are my first love,</p>
         <p className='line'>Back and forward propagation, I want to be the model you love.</p>
         <p className='line'>I’m soleless, but on bare feet & soulful, I’ll chase our dreams greater than Gatsby.</p>
         </div>
+        <br />
+        <div className='author'>
+        — <a className='authorTxt' href='https://instagram.com/jedstroke'>Jedidiah Gabriel</a>
+        </div>
+        <br />
+        <br />
+        <footer>© 2022 Jedidiah Gabriel.</footer>
       </div>
       </div>
       <img src="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg" alt="" onLoad={() => {

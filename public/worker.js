@@ -15,6 +15,9 @@ self.addEventListener('install', event => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
+      .catch(() => {
+      
+      })
   );
 });
 // Cache and return requests
@@ -28,7 +31,9 @@ self.addEventListener('fetch', event => {
         }
         return fetch(event.request);
       }
-    )
+    ).catch(() => {
+
+    })
   );
 });
 

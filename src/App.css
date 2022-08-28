@@ -130,3 +130,18 @@ Primary Color/* #0c0712 */
 @keyframes beat {
 	to { transform: scale(1.2); }
 }
+.authorTxt {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+.author {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+footer {
+  color: white;
+  text-align: center;
+  font-size: small;
+}
