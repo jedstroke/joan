@@ -35,6 +35,7 @@ function App() {
       tapper.current.addEventListener('click', () => {
         if(!soundInit){
           sounder();
+          setSoundInit(!soundInit);
         }
       })
     };
