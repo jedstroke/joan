@@ -14,7 +14,7 @@ function App() {
     memories.current.play()
     memories.current.pause()
     setSoundInit(true);
-    toast.dismiss('toast one');
+    toast.dismiss('toasty');
     toast('Thank you 👏🏽', {
       id:'toast',
       duration: 1000,
