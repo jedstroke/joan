@@ -13,7 +13,7 @@ function App() {
   const sounder = useCallback(() => {
     memories.current.play()
     memories.current.pause()
-    setSoundInit(true);
+    setSoundInit(!soundInit);
     toast.dismiss('toast one');
     toast('Thank you 👏🏽', {
       id:'toast',
@@ -35,7 +35,6 @@ function App() {
       tapper.current.addEventListener('click', () => {
         if(!soundInit){
           sounder();
-          setSoundInit(!soundInit);
         }
       })
     };
