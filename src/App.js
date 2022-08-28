@@ -19,11 +19,17 @@ function App() {
       id:'toast',
       duration: 1000,
     });
+    setTimeout(() => {
+      toast('Two stanza at a time to feel the vibes ✌🏽', {
+        id:'toast',
+        duration: 2000,
+      });
+    })
   }, [])
   useEffect(() => {
     const toast1 = () => {
       toast('Click the screen to unlock sounds 😉', {
-        id:'toast one',
+        id:'toaster',
         duration: 50000,
       });
       tapper.current.addEventListener('click', () => {
