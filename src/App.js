@@ -13,8 +13,8 @@ function App() {
   const sounder = useCallback(() => {
     memories.current.play()
     memories.current.pause()
-    setSoundInit(true);
     toast.dismiss('toasty');
+    setSoundInit(true);
     toast('Thank you 👏🏽', {
       id:'toast',
       duration: 1000,
