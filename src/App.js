@@ -24,7 +24,7 @@ function App() {
     const toast1 = () => {
       toast('Click the screen to unlock sounds 😉', {
         id:'toasty',
-        duration: 50000,
+        duration: 2500,
       });
       tapper.current.addEventListener('click', () => {
         if(!soundInit){
