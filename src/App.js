@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import './App.css';
 function App() {
@@ -10,27 +10,26 @@ function App() {
   const memories = useRef(null);
   const poem = useRef(null);
   const preloader = useRef(null);
-  const sounder = useCallback(() => {
-    memories.current.play()
-    memories.current.pause()
-    toast.dismiss('toasty');
+  const sounder = () => {
     setSoundInit(true);
-    toast('Thank you 👏🏽', {
-      id:'toast',
-      duration: 1000,
-    });
-  }, [])
+    if(!soundInit){
+      toast.dismiss('toasty');  
+      memories.current.play()
+      memories.current.pause()
+      toast('Thank you 👏🏽', {
+        id:'toast',
+        duration: 1000,
+      });
+    }
+    tapper.current.removeEventListener('click', sounder);
+  };
   useEffect(() => {
     const toast1 = () => {
       toast('Click the screen to unlock sounds 😉', {
         id:'toasty',
-        duration: 2500,
+        duration: 3500,
       });
-      tapper.current.addEventListener('click', () => {
-        if(!soundInit){
-          sounder();
-        }
-      })
+      tapper.current.addEventListener('click', sounder)
     };
     const stanzas = document.querySelectorAll('.stanza');
     const observer = new IntersectionObserver(entries => {
@@ -57,7 +56,7 @@ function App() {
       observer.observe(el);
     })
     toast1();
-  }, [soundInit, sounder])
+  }, [])
   return (
     <>
     <div ref={tapper} className="App">
@@ -137,7 +136,7 @@ function App() {
               setTimeout(() => {
                 poem.current.scrollTo(0, -100)
               }, 500)
-            }, 2000)
+            }, 500)
         }, 5000)
 
       }} />
