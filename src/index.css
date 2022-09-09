@@ -10,6 +10,9 @@
 @font-face {
   font-family: 'Mellow';
   src: url(https://res.cloudinary.com/jedstroke/raw/upload/v1661197940/HandoSoftTrial-Regular_lvjyzo.ttf);
+}html, body {
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+  background: linear-gradient(to right, #00223E, #FFA17F)
 }
 html, body, #root {
   padding: 0;

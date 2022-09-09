@@ -39,7 +39,7 @@ self.addEventListener('fetch', event => {
 
 // Update a service worker
 self.addEventListener('activate', event => {
-  var cacheWhitelist = ['your-app-name'];
+  var cacheWhitelist = ['React_Joan_App_'];
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
