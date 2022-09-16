@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# For Joan
+This project is a form of digital poetry & a progressive web app built with Reactjs (wasn't necessary though). 
+I hope you get inspired ❤️
+Originally inspired by my girlfriend.
+Here's the link to download the WebAPK [For Joan](https://drive.google.com/file/d/1bsy7XXh9j-JEpCHvzkCtVwxW9DQTL1Op/view?usp=sharing)
+And the live site hosted on 👉🏽 [joan.onrender.com](https://joan.onrender.com)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
