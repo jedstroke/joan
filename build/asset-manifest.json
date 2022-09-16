@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9256a907.css?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "main.js": "/static/js/main.72eb46b8.js?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "static/js/787.ae1c4ea6.chunk.js?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)": "/static/js/787.ae1c4ea6.chunk.js?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.9256a907.css.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)": "/static/css/main.9256a907.css.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "main.72eb46b8.js.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)": "/static/js/main.72eb46b8.js.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "787.ae1c4ea6.chunk.js.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)": "/static/js/787.ae1c4ea6.chunk.js.map?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)"
+  },
+  "entrypoints": [
+    "static/css/main.9256a907.css?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)",
+    "static/js/main.72eb46b8.js?date=Fri Sep 16 2022 18:47:37 GMT+0100 (West Africa Standard Time)"
+  ]
+}

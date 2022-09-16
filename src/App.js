@@ -113,7 +113,7 @@ function App() {
         </div>
         <br />
         <br />
-        <footer>© 2022 Jedidiah Gabriel.</footer>
+        <footer>© 2022, <big>Jedidiah Gabriel.</big></footer>
       </div>
       </div>
       <img src="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg" alt="" onLoad={() => {
