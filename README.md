@@ -1,7 +1,9 @@
 # For Joan
 This project is a form of digital poetry & a progressive web app built with Reactjs (wasn't necessary though). 
 I hope you get inspired ❤️
-Originally inspired by my girlfriend.
+<br>
+Inspired by my girlfriend.
+<br>
 Here's the link to download the WebAPK [For Joan](https://drive.google.com/file/d/1bsy7XXh9j-JEpCHvzkCtVwxW9DQTL1Op/view?usp=sharing)
 And the live site hosted on 👉🏽 [joan.onrender.com](https://joan.onrender.com)
 
