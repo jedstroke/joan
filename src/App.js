@@ -27,7 +27,7 @@ function App() {
     const toast1 = () => {
       toast('Click the screen to unlock sounds 😉', {
         id:'toasty',
-        duration: 3500,
+        duration: 6000,
       });
       tapper.current.addEventListener('click', sounder)
     };
@@ -69,7 +69,9 @@ function App() {
           <img className='heart' ref={heart} src="https://res.cloudinary.com/jedstroke/image/upload/v1661012008/heart_3_ihwvqu.png" alt="" />
           </div>
           <div>
-          <p>For Joan</p>
+          <p style={{
+            fontFamily:'Mellow Bold'
+          }}>For Joan</p>
           </div>
         </div>
       </div>
@@ -77,7 +79,8 @@ function App() {
       <div className='overlay'>
       <div ref={poem} className='poem'>
         <h1 className='title' style={{
-          position: title
+          position: title,
+          fontFamily: 'Mellow Bold'
         }}>For Joan</h1>
         <div className='pushBox'>
         </div>
@@ -112,8 +115,6 @@ function App() {
         — <a className='authorTxt' href='https://instagram.com/jedstroke'>Jedidiah Gabriel</a>
         </div>
         <br />
-        <br />
-        <footer>© 2022, <big>Jedidiah Gabriel.</big></footer>
       </div>
       </div>
       <img src="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg" alt="" onLoad={() => {
