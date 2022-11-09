@@ -1,6 +1,6 @@
+/* eslint-disable */
 import { useRef, useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import './App.css';
 function App() {
   const [title] = useState('sticky');
   const [soundInit, setSoundInit] = useState(false);
@@ -91,24 +91,24 @@ function App() {
         <p className='line'>I bet we’re on God’s favorite TV series</p>
         </div>
         <div data-mood="" className='stanza'>
-        <p className='line'>I didn’t know I had arrhythmia</p>
+        <p className='line'>I didn’t know I had <span className='anote'>arrhythmia</span></p>
         <p className='line'>Until I met you. You’re my redeemer</p>
         <p className='line'>I’m laid-back, and I chase no Maybach</p>
         </div>
         <div data-mood="Hollow Coves" className='stanza'>
-        <p className='line'>But aurora-dreams for Joan</p>
+        <p className='line'>But <span className='anote'>aurora-dreams</span> for Joan</p>
         <p className='line'>In mid-night sun I’ll ask to be your man</p>
-        <p className='line'>Life has been hell but you’ve been my novocaine</p>
+        <p className='line'>Life has been hell but you’ve been my <span className='anote'>novocaine</span></p>
         </div>
         <div data-mood="" className='stanza'>
         <p className='line'>When I fall apart you keep me sane</p>
         <p className='line'>Space or time can’t take you from my astral plane</p>
-        <p className='line'>And when we have a kid I think I will name him Gekyume</p>
+        <p className='line'>And when we have a kid I think I will name him <span className='anote'>Gekyume</span></p>
         </div>
         <div data-mood='' className='stanza'>
         <p className='line'>Because you were, and are my first love,</p>
-        <p className='line'>Back and forward propagation, I want to be the model you love.</p>
-        <p className='line'>I’m soleless, but on bare feet & soulful, I’ll chase our dreams greater than Gatsby.</p>
+        <p className='line'><span className='anote'>Back and forward propagation</span>, I want to be the <span className='anote'>model</span> you love.</p>
+        <p className='line'>I’m soleless, but on bare feet & soulful, I’ll chase our dreams <span className='anote'>greater than Gatsby.</span></p>
         </div>
         <br />
         <div className='author'>
