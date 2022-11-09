@@ -8,12 +8,10 @@
   scrollbar-width: none; 
 }
 @font-face {
-  font-display: optional;
   font-family: 'Mellow';
   src: url(../public/fonts/Coco-Light.ttf);
 }
 @font-face {
-  font-display: optional;
   font-family: 'Mellow Bold';
   src: url(../public/fonts/Futura-Bold.ttf);
 }
