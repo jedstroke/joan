@@ -186,7 +186,7 @@ function App() {
       <Toaster
         toastOptions={{
           style: {
-            fontFamily: "Mellow,' Trebuchet MS, Helvetica, sans-serif",
+            fontFamily: "Mellow, Trebuchet MS, Helvetica, sans-serif",
             color: "#424449",
             textAlign: "center",
             fontWeight: "bold",
