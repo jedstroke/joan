@@ -1,10 +1,8 @@
 # For Joan
-This project is a form of digital poetry & a progressive web app built with Reactjs (wasn't necessary though). 
-I hope you get inspired ❤️
+### This project is a form of digital poetry & a progressive web app built with Reactjs (over-engineered 😐). Inspired by the girl of my dreams ❤️
 <br>
-Inspired by my girlfriend.
-<br>
-And the live site hosted on 👉🏽 [joan.onrender.com](https://joan.onrender.com)
+
+Hosted on 🌍 [joan.onrender.com](https://joan.onrender.com)
 
 ## Getting Started with Create React App
 
