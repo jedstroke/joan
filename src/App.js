@@ -189,7 +189,6 @@ function App() {
             fontFamily: "Mellow, Trebuchet MS, Helvetica, sans-serif",
             color: "#424449",
             textAlign: "center",
-            fontWeight: "bold",
             padding: "2px",
             fontSize: "18px",
             wordBreak: "keep-all",

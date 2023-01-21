@@ -95,8 +95,6 @@ Primary Color/* #0c0712 */
   justify-content: center;
 }
 .preloaderContent div > p {
-  font-family: inherit;
-  font-weight: bold;
   font-size: 40px;
   color: rgb(236, 231, 231);
   position: relative;
@@ -147,7 +145,6 @@ Primary Color/* #0c0712 */
   position: absolute;
   font-family: 'Mellow Bold',
     'Trebuchet MS", Helvetica, sans-serif';
-  font-weight: bolder;
   justify-content: center ;
   align-items: center;
 }
