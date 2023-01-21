@@ -2,7 +2,6 @@
 import { useRef, useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 function App() {
-  const [title] = useState('sticky');
   const [soundInit, setSoundInit] = useState(false);
   const [playing, setPlaying] = useState(false);
   const heart = useRef(null);
@@ -78,11 +77,7 @@ function App() {
       <div className='content'>
       <div className='overlay'>
       <div ref={poem} className='poem'>
-        <h1 className='title' style={{
-          position: title,
-          fontFamily: 'Mellow Bold, Fallback',
-          fontDisplay:'swap'
-        }}>For Joan</h1>
+        <h1 className='title'></h1>
         <div className='pushBox'>
         </div>
         <div className='gradient'></div>

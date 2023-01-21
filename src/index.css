@@ -133,17 +133,12 @@ Primary Color/* #0c0712 */
   text-align: center;
   top: -20px;
   height: 100px;
-  background-image: url(https://res.cloudinary.com/jedstroke/image/upload/v1661594032/azure_wveuzd.png);
-  background-blend-mode: lighten;
-  background-repeat: repeat;
   padding-top: 30px;
   z-index: 5;
   display: flex;
   font-weight: bolder;
   justify-content: center ;
   align-items: center;
-  position: sticky;
-  font-family: 'Mellow';
 }
 .stanza {
   margin: auto;
