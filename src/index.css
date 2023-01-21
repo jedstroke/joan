@@ -18,10 +18,13 @@
   transition: all .7s;
   opacity: 1;
 }
-
-/* @font-face {
+/* 
+@font-face {
   font-family: 'Fallback';
-  src: local(Verdana);
+  font-weight: normal;
+  src: local(Tahoma,
+    Verdana,
+    sans-serif);
 } */
 @font-face {
   font-family: 'Mellow';
@@ -44,7 +47,8 @@ html, body, #root {
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: 'Mellow',' Trebuchet MS", Helvetica, sans-serif';
+  font-family: 'Mellow';
+  font-display: block;
 }
 Primary Color/* #0c0712 */
 .App {
@@ -96,6 +100,7 @@ Primary Color/* #0c0712 */
 }
 .preloaderContent div > p {
   font-size: 40px;
+  font-weight: bold;
   color: rgb(236, 231, 231);
   position: relative;
   top: 40px;
@@ -142,9 +147,10 @@ Primary Color/* #0c0712 */
   z-index: 3;
   top: 150px;
   display: flex;
+  font-weight: bold;
   position: absolute;
-  font-family: 'Mellow Bold',
-    'Trebuchet MS", Helvetica, sans-serif';
+  font-family: 'Mellow Bold';
+  font-display: block;
   justify-content: center ;
   align-items: center;
 }
@@ -161,9 +167,10 @@ Primary Color/* #0c0712 */
   padding-right: 5px;
   margin-bottom: 8px;
   margin-top: 0px;
+  word-spacing: -1px;
   line-height: 1;
   font-size: large;
-  font-weight: lighter;
+  font-weight: 600;
   color: white;
   text-align: center;
 }
@@ -174,6 +181,7 @@ Primary Color/* #0c0712 */
   text-decoration: none;
   color: white;
   font-size: large;
+  font-weight: 600;
 }
 .author {
   display: flex;

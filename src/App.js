@@ -25,7 +25,7 @@ function App() {
   };
   useEffect(() => {
     const toast1 = () => {
-      toast('Tap the screen for sounds 😉', {
+      toast('Tap the screen for sound 😉', {
         id:'toasty',
         duration: 6000,
       });
@@ -86,7 +86,7 @@ function App() {
             <div>
               <p
                 style={{
-                  fontFamily: "Mellow Bold, Trebuchet MS, Helvetica, sans-serif",
+                  fontFamily: "Mellow Bold",
                 }}
               >
                 For Joan
@@ -186,7 +186,8 @@ function App() {
       <Toaster
         toastOptions={{
           style: {
-            fontFamily: "Mellow, Trebuchet MS, Helvetica, sans-serif",
+            fontFamily: "Mellow",
+            fontWeight: 'bold',
             color: "#424449",
             textAlign: "center",
             padding: "2px",
