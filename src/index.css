@@ -8,13 +8,22 @@
   scrollbar-width: none; 
 }
 @font-face {
+  font-family: 'Fallback';
+  src: local(Trebuchet MS);
+  size-adjust: 90%;
+  ascent-override: 92%;
+  descent-override: normal;
+  line-gap-override: normal;
+}
+@font-face {
   font-family: 'Mellow';
-  src: url(../public/fonts/Coco-Light.ttf);
+  src: url(../public/fonts/Coco-Light.ttf)
 }
 @font-face {
   font-family: 'Mellow Bold';
   src: url(../public/fonts/Futura-Bold.ttf);
 }
+
 html, body {
   background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
   background: linear-gradient(to right, #00223E, #FFA17F)
@@ -27,7 +36,7 @@ html, body, #root {
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: 'Mellow';
+  font-family: 'Mellow', 'Fallback';
 }
 Primary Color/* #0c0712 */
 .App {
@@ -84,7 +93,6 @@ Primary Color/* #0c0712 */
   color: rgb(236, 231, 231);
   position: relative;
   top: 40px;
-  text-shadow: 0px 0px 1px black;
 }
 .content {
   width: 100%;
@@ -132,7 +140,6 @@ Primary Color/* #0c0712 */
   z-index: 5;
   display: flex;
   font-weight: bolder;
-  text-shadow: 0px 0px 1px black;
   justify-content: center ;
   align-items: center;
   position: sticky;
@@ -156,7 +163,6 @@ Primary Color/* #0c0712 */
   font-weight: lighter;
   color: white;
   text-align: center;
-  text-shadow: 0px 0px 1px grey;
 }
 @keyframes beat {
 	to { transform: scale(1.2); }

@@ -25,7 +25,7 @@ function App() {
   };
   useEffect(() => {
     const toast1 = () => {
-      toast('Click the screen to unlock sounds 😉', {
+      toast('Tap the screen for sounds 😉', {
         id:'toasty',
         duration: 6000,
       });
@@ -70,7 +70,7 @@ function App() {
           </div>
           <div>
           <p style={{
-            fontFamily:'Mellow Bold'
+            fontFamily:'Mellow Bold, Fallback',
           }}>For Joan</p>
           </div>
         </div>
@@ -80,7 +80,8 @@ function App() {
       <div ref={poem} className='poem'>
         <h1 className='title' style={{
           position: title,
-          fontFamily: 'Mellow Bold'
+          fontFamily: 'Mellow Bold, Fallback',
+          fontDisplay:'swap'
         }}>For Joan</h1>
         <div className='pushBox'>
         </div>
@@ -145,8 +146,9 @@ function App() {
     </div>
     <Toaster toastOptions={{
     style: {
-      fontFamily: 'Mellow',
+      fontFamily: 'Mellow, Fallback',
       color: '#424449',
+      textAlign: 'center',
       fontWeight:'bold',
       padding: '2px',
       fontSize:'18px',
