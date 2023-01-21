@@ -3,6 +3,7 @@
 }
 * {
   user-select: none;
+  font-display: block !important;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   -ms-overflow-style: none; 
@@ -48,7 +49,7 @@ html, body, #root {
   overflow-y: hidden;
   overflow-x: hidden;
   font-family: 'Mellow';
-  font-display: block;
+  font-display: block !important;
 }
 Primary Color/* #0c0712 */
 .App {
@@ -170,7 +171,7 @@ Primary Color/* #0c0712 */
   word-spacing: -1px;
   line-height: 1;
   font-size: large;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   text-align: center;
 }
