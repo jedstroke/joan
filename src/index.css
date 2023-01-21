@@ -19,10 +19,10 @@
   opacity: 1;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Fallback';
   src: local(Verdana);
-}
+} */
 @font-face {
   font-family: 'Mellow';
   src: url(../public/fonts/Coco-Light.ttf)
@@ -44,7 +44,7 @@ html, body, #root {
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: 'Mellow', 'Fallback';
+  font-family: 'Mellow',' Trebuchet MS", Helvetica, sans-serif';
 }
 Primary Color/* #0c0712 */
 .App {
@@ -145,7 +145,8 @@ Primary Color/* #0c0712 */
   top: 150px;
   display: flex;
   position: absolute;
-  font-family: 'Mellow Bold', 'Fallback';
+  font-family: 'Mellow Bold',
+    'Trebuchet MS", Helvetica, sans-serif';
   font-weight: bolder;
   justify-content: center ;
   align-items: center;
