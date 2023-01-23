@@ -86,7 +86,7 @@ function App() {
             <div>
               <p
                 style={{
-                  fontFamily: "Mellow Bold",
+                  fontFamily: "'Mellow', 'Trebuchet MS', sans-serif",
                 }}
               >
                 For Joan
@@ -186,8 +186,9 @@ function App() {
       <Toaster
         toastOptions={{
           style: {
-            fontFamily: "Mellow",
-            fontWeight: 'bold',
+            fontFamily: "'Mellow', 'Trebuchet MS', sans-serif",
+            fontDisplay: "swap",
+            fontWeight: "bold",
             color: "#424449",
             textAlign: "center",
             padding: "2px",

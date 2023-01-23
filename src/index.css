@@ -48,8 +48,8 @@ html, body, #root {
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: 'Mellow';
-  font-display: block !important;
+  font-family: 'Mellow', 'Trebuchet MS', sans-serif;
+  font-display: swap;
 }
 Primary Color/* #0c0712 */
 .App {
@@ -150,9 +150,9 @@ Primary Color/* #0c0712 */
   display: flex;
   font-weight: bold;
   position: absolute;
-  font-family: 'Mellow Bold';
-  font-display: block;
-  justify-content: center ;
+  font-family: 'Mellow Bold', 'Trebuchet MS', sans-serif;
+  font-display: swap;
+  justify-content: center;
   align-items: center;
 }
 .stanza {
