@@ -188,7 +188,7 @@ function App() {
           style: {
             fontFamily: "'Mellow', 'Trebuchet MS', sans-serif",
             fontDisplay: "swap",
-            fontWeight: "bold",
+            fontWeight: "500",
             color: "#424449",
             textAlign: "center",
             padding: "2px",
