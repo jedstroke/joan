@@ -86,7 +86,7 @@ function App() {
             <div>
               <p
                 style={{
-                  fontFamily: "'Mellow', 'Trebuchet MS', sans-serif",
+                  fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
                 }}
               >
                 For Joan
