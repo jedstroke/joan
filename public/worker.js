@@ -1,11 +1,11 @@
 var CACHE_NAME = "React_Joan_App_"
 
 var urlsToCache = [
-  './Futura-Bold.ttf',
-  './Coco-Light.tff',
-  'https://res.cloudinary.com/jedstroke/image/upload/v1661012008/heart_3_ihwvqu.png',
-  'https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg',
-  'https://res.cloudinary.com/jedstroke/video/upload/v1660959435/Hollow_Coves_-_These_Memories_tlcjqg.mp3',
+  "./fonts/Futura-Bold.ttf",
+  "./fonts/Coco-Light.tff",
+  "https://res.cloudinary.com/jedstroke/image/upload/v1661012008/heart_3_ihwvqu.png",
+  "https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg",
+  "https://res.cloudinary.com/jedstroke/video/upload/v1660959435/Hollow_Coves_-_These_Memories_tlcjqg.mp3",
 ];
 
 // Install a service worker
