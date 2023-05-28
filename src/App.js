@@ -27,7 +27,7 @@ function App() {
     const toast1 = () => {
       toast('Tap the screen for sound 😉', {
         id:'toasty',
-        duration: 6000,
+        duration: 10000,
       });
       tapper.current.addEventListener('click', sounder)
     };
@@ -189,7 +189,7 @@ function App() {
           style: {
             fontFamily: "'Mellow', 'Trebuchet MS', sans-serif",
             fontDisplay: "swap",
-            fontWeight: "500",
+            fontWeight: "600",
             color: "#424449",
             textAlign: "center",
             padding: "2px",
