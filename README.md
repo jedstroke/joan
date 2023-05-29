@@ -2,7 +2,7 @@
 ### This project is a form of digital poetry & a progressive web app built with Reactjs (over-engineered 😐). Inspired by the girl of my dreams ❤️
 <br>
 
-Hosted on 🌍 [joan.onrender.com](https://joan.onrender.com)
+Hosted on 🌍 [loml.jedshock.com](https://loml.jedshock.com)
 
 ## Getting Started with Create React App
 
