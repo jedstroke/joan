@@ -6,17 +6,17 @@
   font-display: block !important;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #hideTitle {
-  transition: all .7s;
+  transition: all 0.7s;
   opacity: 0;
 }
 
 #showTitle {
-  transition: all .7s;
+  transition: all 0.7s;
   opacity: 1;
 }
 /* 
@@ -26,29 +26,32 @@
   src: local(Tahoma,
     Verdana,
     sans-serif);
-} */
+  } */
 @font-face {
-  font-family: 'Mellow';
-  src: url(../public/fonts/Coco-Light.ttf)
-}
-@font-face {
-  font-family: 'Mellow Bold';
+  font-family: "Mellow Bold";
   src: url(../public/fonts/Futura-Bold.ttf);
 }
-
-html, body {
-  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
-  background: linear-gradient(to right, #00223E, #FFA17F)
+@font-face {
+  font-family: "Mellow";
+  src: url(../public/fonts/Coco-Light.ttf);
 }
-html, body, #root {
+
+html,
+body {
+  background: -webkit-linear-gradient(to right, #00223e, #ffa17f);
+  background: linear-gradient(to right, #00223e, #ffa17f);
+}
+html,
+body,
+#root {
   padding: 0;
-  height: 100%; 
-  width: 100%; 
-  margin: 0; 
+  height: 100%;
+  width: 100%;
+  margin: 0;
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: 'Mellow', 'Trebuchet MS', sans-serif;
+  font-family: "Mellow", "Trebuchet MS", sans-serif;
   font-display: swap;
 }
 Primary Color/* #0c0712 */
@@ -72,10 +75,10 @@ Primary Color/* #0c0712 */
   height: 100%;
   z-index: 6;
   position: absolute;
-  background: #FFA17F;  
-  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
-  background: linear-gradient(to right, #00223E, #FFA17F);
-  transition: all 1s;      
+  background: #ffa17f;
+  background: -webkit-linear-gradient(to right, #00223e, #ffa17f);
+  background: linear-gradient(to right, #00223e, #ffa17f);
+  transition: all 1s;
 }
 .preloaderContent {
   position: relative;
@@ -87,10 +90,10 @@ Primary Color/* #0c0712 */
   position: absolute;
   z-index: 1;
   width: 130px;
-  animation: beat .7s infinite alternate;
-	transform-origin: center;
+  animation: beat 0.7s infinite alternate;
+  transform-origin: center;
   transition: all 1.5s 5s;
-} 
+}
 .heartZoom {
   width: 2000px;
 }
@@ -130,7 +133,7 @@ Primary Color/* #0c0712 */
   z-index: 2;
 }
 .poem {
-  color: #FFFFFF;
+  color: #ffffff;
   width: 100%;
   height: 650px;
   overflow-x: auto;
@@ -150,7 +153,7 @@ Primary Color/* #0c0712 */
   display: flex;
   font-weight: bold;
   position: absolute;
-  font-family: 'Mellow Bold', 'Trebuchet MS', sans-serif;
+  font-family: "Mellow Bold", "Trebuchet MS", sans-serif;
   font-display: swap;
   justify-content: center;
   align-items: center;
@@ -176,7 +179,9 @@ Primary Color/* #0c0712 */
   text-align: center;
 }
 @keyframes beat {
-	to { transform: scale(1.2); }
+  to {
+    transform: scale(1.2);
+  }
 }
 .authorTxt {
   text-decoration: none;

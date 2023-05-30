@@ -1,10 +1,13 @@
 /* eslint-disable */
-import { useRef, useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import { useRef, useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import FontFaceObserver from "fontfaceobserver";
+import Shimmer from "react-shimmer-effect";
 function App() {
   const [soundInit, setSoundInit] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [title, setTitle] = useState(false);
+  const [shimmer, setShimmer] = useState(true);
   const heart = useRef(null);
   const tapper = useRef(null);
   const memories = useRef(null);
@@ -12,57 +15,77 @@ function App() {
   const preloader = useRef(null);
   const sounder = () => {
     setSoundInit(true);
-    if(!soundInit){
-      toast.dismiss('toasty');  
-      memories.current.play()
-      memories.current.pause()
-      toast('Thank you 👏🏽', {
-        id:'toast',
+    if (!soundInit) {
+      toast.dismiss("toasty");
+      memories.current.play();
+      memories.current.pause();
+      toast("Thank you 👏🏽", {
+        id: "toast",
         duration: 1000,
       });
     }
-    tapper.current.removeEventListener('click', sounder);
+    tapper.current.removeEventListener("click", sounder);
   };
   useEffect(() => {
-    const toast1 = () => {
-      toast('Tap the screen for sound 😉', {
-        id:'toasty',
-        duration: 10000,
-      });
-      tapper.current.addEventListener('click', sounder)
-    };
-    const stanzas = document.querySelectorAll('.stanza');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          // console.log(entry);
-          if(entry.target.dataset.mood === 'Hollow Coves'){
-            setTitle(true);
-            if (!playing) {
-              memories.current.volume = 0.5;
-              memories.current.play();
-              setPlaying(true);
+    if (!shimmer) {
+      const toast1 = () => {
+        toast("Tap the screen for sound 😉", {
+          id: "toasty",
+          duration: 15000,
+        });
+        tapper.current.addEventListener("click", sounder);
+      };
+      toast1();
+    }
+  }, [!shimmer]);
+  useEffect(() => {
+    let font = new FontFaceObserver("Mellow");
+    font.load().then(
+      () => {
+        setTimeout(() => {
+          console.log("shit works!");
+          setShimmer(false);
+        }, 2000);
+      },
+      () => {
+        setTimeout(() => {
+          setShimmer(false);
+        }, 6000);
+      }
+    );
+    const stanzas = document.querySelectorAll(".stanza");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // console.log(entry);
+            if (entry.target.dataset.mood === "Hollow Coves") {
+              setTitle(true);
+              if (!playing) {
+                memories.current.volume = 0.5;
+                memories.current.play();
+                setPlaying(true);
+              }
             }
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          } else {
+            if (entry.target.dataset.mood === "Hollow Coves") {
+              setTitle(false);
+            }
+            entry.target.style.opacity = "0";
+            entry.target.style.transform = "translateY(60px)";
           }
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }else{
-          // console.log(entry);
-          if (entry.target.dataset.mood === "Hollow Coves") {
-            setTitle(false);
-          }
-          entry.target.style.opacity = '0';
-          entry.target.style.transform = 'translateY(60px)';
-        }
-      })
-    }, {
-      root: poem.current
-    })
-    stanzas.forEach(el => {
+        });
+      },
+      {
+        root: poem.current,
+      }
+    );
+    stanzas.forEach((el) => {
       observer.observe(el);
-    })
-    toast1();
-  }, [])
+    });
+  }, []);
   return (
     <>
       <div ref={tapper} className="App">
@@ -84,14 +107,27 @@ function App() {
               />
             </div>
             <div>
-              <p
-                style={{
-                  fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
-                  fontDisplay: "swap"
-                }}
-              >
-                For Joan
-              </p>
+              {!shimmer ? (
+                <p
+                  style={{
+                    fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
+                    fontDisplay: "swap",
+                  }}
+                >
+                  For Joan
+                </p>
+              ) : (
+                <Shimmer>
+                  <p
+                    style={{
+                      fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
+                      fontDisplay: "swap",
+                    }}
+                  >
+                    For Joan
+                  </p>
+                </Shimmer>
+              )}
             </div>
           </div>
         </div>
@@ -155,33 +191,37 @@ function App() {
               <br />
             </div>
           </div>
-          <img
-            src="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg"
-            alt=""
-            onLoad={() => {
-              if (window.innerWidth > window.innerHeight) {
-                toast("Use a portrait screen 🙏🏽", {
-                  duration: 10000,
-                  style: {
-                    width: "fit-content",
-                    whiteSpace: "nowrap",
-                  },
-                });
-                return;
-              }
-              heart.current.classList.add("heartZoom");
-              setTimeout(() => {
-                preloader.current.classList.add("fadeOut");
+          {shimmer ? (
+            <></>
+          ) : (
+            <img
+              src="https://res.cloudinary.com/jedstroke/image/upload/v1661032883/IMG_20220612_103555_500_2_1_yhshji.jpg"
+              alt=""
+              onLoad={() => {
+                if (window.innerWidth > window.innerHeight) {
+                  toast("Use a portrait screen 🙏🏽", {
+                    duration: 10000,
+                    style: {
+                      width: "fit-content",
+                      whiteSpace: "nowrap",
+                    },
+                  });
+                  return;
+                }
+                heart.current.classList.add("heartZoom");
                 setTimeout(() => {
-                  preloader.current.style.display = "none";
-                  poem.current.scrollTo(0, 100);
+                  preloader.current.classList.add("fadeOut");
                   setTimeout(() => {
-                    poem.current.scrollTo(0, -100);
+                    preloader.current.style.display = "none";
+                    poem.current.scrollTo(0, 100);
+                    setTimeout(() => {
+                      poem.current.scrollTo(0, -100);
+                    }, 500);
                   }, 500);
-                }, 500);
-              }, 5000);
-            }}
-          />
+                }, 5000);
+              }}
+            />
+          )}
         </div>
       </div>
       <Toaster
