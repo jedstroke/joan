@@ -2,7 +2,6 @@
 import { useRef, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import FontFaceObserver from "fontfaceobserver";
-import Shimmer from "react-shimmer-effect";
 function App() {
   const [soundInit, setSoundInit] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -107,27 +106,6 @@ function App() {
               />
             </div>
             <div>
-              {!shimmer ? (
-                <p
-                  style={{
-                    fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
-                    fontDisplay: "swap",
-                  }}
-                >
-                  For Joan
-                </p>
-              ) : (
-                <Shimmer>
-                  <p
-                    style={{
-                      fontFamily: "'Mellow Bold', 'Trebuchet MS', sans-serif",
-                      fontDisplay: "swap",
-                    }}
-                  >
-                    For Joan
-                  </p>
-                </Shimmer>
-              )}
             </div>
           </div>
         </div>

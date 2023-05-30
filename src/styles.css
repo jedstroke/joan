@@ -51,7 +51,7 @@ body,
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-family: "Mellow", "Trebuchet MS", sans-serif;
+  font-family: "Mellow", "Verdana", sans-serif;
   font-display: swap;
 }
 Primary Color/* #0c0712 */
@@ -89,7 +89,7 @@ Primary Color/* #0c0712 */
 .heart {
   position: absolute;
   z-index: 1;
-  width: 130px;
+  width: 150px;
   animation: beat 0.7s infinite alternate;
   transform-origin: center;
   transition: all 1.5s 5s;
@@ -151,9 +151,11 @@ Primary Color/* #0c0712 */
   z-index: 3;
   top: 150px;
   display: flex;
-  font-weight: bold;
+  font-size: 50px;
+  word-spacing: -4px;
+  font-weight: bolder;
   position: absolute;
-  font-family: "Mellow Bold", "Trebuchet MS", sans-serif;
+  font-family: "Mellow Bold", "Georgia", sans-serif;
   font-display: swap;
   justify-content: center;
   align-items: center;
@@ -174,7 +176,7 @@ Primary Color/* #0c0712 */
   word-spacing: -1px;
   line-height: 1;
   font-size: large;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
   text-align: center;
 }
@@ -202,7 +204,6 @@ footer {
 * ::selection {
   background-color: rgb(170, 161, 161, 0.5);
 }
-.anote::selection {
-  background-color: transparent;
+.anote {
   font-weight: bolder;
 }
