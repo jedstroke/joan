@@ -1,6 +1,7 @@
 # For Joan
-### This project is a form of digital poetry & a progressive web app built with Reactjs (over-engineered). 
+### This project is a form of digital poetry & a progressive web app. 
 ### Inspired by the girl of my dreams ❤️
+### Star this project so I can show her, it might make her happy 😎
 
 #### Hosted on 🌍 [loml.jedshock.com](https://loml.jedshock.com)
 
