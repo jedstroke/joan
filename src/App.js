@@ -130,7 +130,7 @@ function App() {
               </div>
               <div data-mood="Hollow Coves" className="stanza">
                 <p className="line">
-                  But <span className="anote">aurora-dreams</span> for Joan
+                  But <span className="anote">aurora-dreams</span> for Joanne
                 </p>
                 <p className="line">In mid-night sun I’ll ask to be your man</p>
                 <p className="line">
